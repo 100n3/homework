@@ -1,0 +1,140 @@
+.article {
+	padding-top: 80px;
+	padding-bottom: 120px;
+}
+
+.article__hero,
+.article__info,
+.article__group {
+	margin-bottom: 80px;
+}
+
+.article__decor {
+	position: relative;
+}
+
+.article__decor::before {
+	top: 100px;
+}
+
+.article__decor--2::before {
+	top: 328px;
+	right: 0;
+}
+
+.article__img {
+	width: 1220px;
+	height: 512px;
+}
+
+.article__text {
+	margin-bottom: 20px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: #535755;
+}
+
+.article__title--medium {
+	font-size: 36px;
+}
+
+.article__list {
+	margin-top: 0;
+	padding-left: 16px;
+}
+
+.article__item {
+	margin-bottom: 12px;
+}
+
+.article__item::marker {
+	color: #3596ed;
+	font-size: 21px;
+}
+
+.article__video {
+	margin-bottom: 40px;
+}
+
+.article__play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background-color: #3596ed;
+	border: none;
+	border-radius: 50%;
+	padding: 0;
+	cursor: pointer;
+	-webkit-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+
+.article__play-button:hover {
+	background-color: #3ea5ff;
+}
+
+.article__play-button:not(:disabled):active {
+	background-color: #2e86d2;
+}
+
+@media (width <= 768px) {
+	.article__decor::before {
+		display: none;
+	}
+
+	.article__title--medium {
+		font-size: 32px;
+	}
+
+	.article__hero,
+	.article__info,
+	.article__group {
+		margin-bottom: 60px;
+	}
+}
+
+@media (width<= 576px) {
+	.article {
+		padding-top: 60px;
+		padding-bottom: 80px;
+	}
+
+	.article__title--medium {
+		font-size: 28px;
+	}
+
+	.article__hero,
+	.article__info,
+	.article__group {
+		margin-bottom: 40px;
+	}
+
+	.article__video {
+		margin-bottom: 30px;
+	}
+
+	.article__play-button {
+		width: 50px;
+		height: 50px;
+	}
+
+	.article__img-button {
+		width: 18px;
+		height: 18px;
+	}
+}
